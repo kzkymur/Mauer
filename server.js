@@ -1,6 +1,6 @@
-import http from 'http';
-import url from 'url';
-import fs from 'fs';
+const http = require('http');
+const url = require('url');
+const fs = require('fs');
 
 const server = http.createServer();
 const port = 8081;
@@ -38,7 +38,6 @@ const isModernBrowser = (ua) => {
   ];
   for (const modernAgent of modernList) {
     if (ua.indexOf(modernAgent) !== -1) {
-      console.log(ua);
       return true;
     }
   }
